@@ -137,6 +137,7 @@ jobs:
 
         - name: Update depoyment manifest
           run: |
+            echo "ls -l"
             yq e '.image.tag = "$VERSION"' -i values.yaml
             cat values.yaml
         - name: Commit and push changes
