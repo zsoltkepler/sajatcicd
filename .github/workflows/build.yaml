@@ -22,3 +22,22 @@ jobs:
 
           - name: Build with Maven
             run: ./mvnw -B package
+
+    integration-tests:
+      runs-on: self-hosted
+      needs: build
+      steps:
+        - name: kiírás
+          run: echo "Integrációs tesztek"
+
+    build-image:
+      runs-on: self-hosted
+      needs: build
+      steps:
+        - name: build image
+
+    deploy:
+      runs-on: self-hosted
+      needs: build-image
+      steps:
+        - name: deploy
