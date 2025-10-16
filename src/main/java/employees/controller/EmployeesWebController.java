@@ -34,6 +34,7 @@ public class EmployeesWebController {
         employeesService.createEmployee(command);
         redirectAttributes.addFlashAttribute("message",
                 "Employee has been created: " + command.getName());
+        System.out.println("alma");
         return new ModelAndView("redirect:/");
     }
 
