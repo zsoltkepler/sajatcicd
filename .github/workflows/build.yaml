@@ -20,4 +20,4 @@ jobs:
               java-version: '21'
 
           - name: Build with Maven
-            run: ./mnvw -B package
+            run: ./mvnw -B package
