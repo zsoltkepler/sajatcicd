@@ -12,11 +12,12 @@
 
     <groupId>training</groupId>
     <artifactId>employees</artifactId>
-    <version>1.0.0</version>
+    <version>${build.number}</version>
 
     <properties>
         <mapstruct.version>1.6.3</mapstruct.version>
         <java.version>21</java.version>
+        <build.number>unknown</build.number>
     </properties>
 
 <distributionManagement>
