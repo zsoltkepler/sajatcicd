@@ -29,6 +29,18 @@ jobs:
       steps:
         - name: kiírás
           run: echo "Integrációs tesztek"
+            - name: Checkout
+              uses: actions/checkout@v5
+
+            - name: Setup Java
+              uses: actions/setup-java@v5
+              with:
+                distribution: 'temurin' # See 'Supported distributions' for available options
+                java-version: '21'
+                #cache: 'maven'
+
+            - name: Build with Maven
+              run: ./mvnw -B verify
 
     build-image:
       runs-on: self-hosted
